@@ -32,7 +32,7 @@ class Callback extends Web
                     $name = preg_replace('/\s/', '', $auth['info']['name']);
 
                     if (Model::factory('User')->where('name', $name)->find_one()) {
-                        $name .= rand(100, 999);
+                        $name = rand(100, 999);
                     }
 
                     $user->name = $name;
